@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%) 50%, hsl(240, 73%, 65%));
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;;
+}
+.box-img {
+   display: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-height: 100vh;
+    width: 100vw;
+    
+}
+
+.content-box {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+    width: 80%;
+    border-radius: 1rem;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    
+    margin-bottom: 20px;
+}
+.img-box {
+    position: relative;
+    top: -125px;
+    align-self: center;
+    transform: translateX(-4%);
+    background-image: url(/images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 25px bottom;
+}
+
+.text-box {
+    align-self: center;
+    justify-self: flex-start;
+    position: relative;
+    top: -50px;
+    width: 100%;
+}
+.block_faq {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+    height: 40px;
+    
+    align-content: center;
+}
+.question_answer {
+    margin: 20px 0;
+}
+.arrow {
+    margin: 20px 0;
+    height: 10px;
+    
+}
+.answer {
+    margin-top: 20px;
+}
+
+.block_faq.active {
+    height: 100px;
+    transition: 0.1s;
+}
+ .active .question p {
+    font-weight: bold;
+}
+.active .arrow {
+    transform: rotate(180deg);
+    transition: 0.1s;
+}
+.question p:hover {
+    color: red;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .content-box{
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        
+    }
+    .box-img {
+        display: block;
+        position: absolute;
+        top: 210px;
+        left: -100px;
+    }
+    .img-box {
+        background-image: url(/images/illustration-woman-online-desktop.svg), url(/images/bg-pattern-desktop.svg);
+        background-position: -85px center, -85px center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+        
+        width: 400px;
+        height: 500px;
+        top: 0px;
+        
+        flex: 0 0 auto;
+        
+    }
+    .text-box {
+        top: 0px;
+        margin-right: 80px;
+    }
+    #crop {
+        width: 50px;
+    }
+    h1 {
+        text-align: left;
+    }
+    .mobile {
+        display: none;
+    }
+
+}
+
